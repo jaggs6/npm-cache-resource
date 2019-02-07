@@ -65,6 +65,7 @@ else
     if [ -n "$TOKEN" ]; then
         echo "always-auth=true" >> ~/.npmrc
         echo "_auth="$TOKEN"" >> ~/.npmrc
+        echo "//registry.npmjs.org/:_authToken="$TOKEN"" >> ~/.npmrc
     fi
     if [ -n "$REGISTRY" ]; then
         echo "Set Private Registry: "$REGISTRY"" >&2
